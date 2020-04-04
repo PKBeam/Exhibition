@@ -1,5 +1,0 @@
-version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
-options: "0561de10cd0fc0feb1d619b9a9f58eb6"
-build_time: [1586005683, 429469000]
-inputs:
-  "/Users/pkbeam/Documents/Programming/Exhibition/Exhibition/AppDelegate.swift": [1586005680, 139629272]
