@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>2210197B-3BD6-42A3-BFB2-824A4320F6AA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>2210197B-3BD6-42A3-BFB2-824A4320F6AA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>Exhibition-hcuvxxcpmuetvmbqrtazcevsfpfi</string>
+			<key>timeStartedRecording</key>
+			<real>582384736.60601604</real>
+			<key>timeStoppedRecording</key>
+			<real>582384746.96006596</real>
+			<key>title</key>
+			<string>Build target Exhibition</string>
+			<key>uniqueIdentifier</key>
+			<string>2210197B-3BD6-42A3-BFB2-824A4320F6AA</string>
+		</dict>
+		<key>744F0943-391F-42A2-A47D-7DB7D37A1C90</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>744F0943-391F-42A2-A47D-7DB7D37A1C90.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>Exhibition-eyqwaszhzawakfcvgrujrcmjaxva</string>
+			<key>timeStartedRecording</key>
+			<real>607698518.32357502</real>
+			<key>timeStoppedRecording</key>
+			<real>607698533.2392</real>
+			<key>title</key>
+			<string>Build target Exhibition</string>
+			<key>uniqueIdentifier</key>
+			<string>744F0943-391F-42A2-A47D-7DB7D37A1C90</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>

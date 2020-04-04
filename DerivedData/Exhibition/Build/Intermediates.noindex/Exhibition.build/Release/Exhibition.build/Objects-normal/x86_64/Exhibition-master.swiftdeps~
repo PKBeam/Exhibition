@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.0.2 (swiftlang-900.0.69.2 clang-900.0.38)"
+options: "fac911752ab7c5ecef92085b469a1421"
+build_time: [1511496109, 963423000]
+inputs:
+  "/Users/pkbeam/Documents/Xcode/Exhibition/Exhibition/AppDelegate.swift": [9223372036, 854775807]
