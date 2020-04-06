@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "AppDelegate.updateActiveDisplayMode(on:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "i.title">
+            </PersistentString>
+            <PersistentString
+               value = "menu.items">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AppDelegate.setActiveDisplayMode(on:):AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
@@ -15,6 +26,14 @@
          <PersistentStrings>
             <PersistentString
                value = "1 + index">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.changeDisplayMode(sender:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "menu.items">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

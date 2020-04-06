@@ -147,11 +147,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func getCurrentDisplayMode() -> NSMenuItem {
         var thisItem: NSMenuItem?
+        var i = 0
         repeat {
-            thisItem = menu.items.removeFirst()
+            thisItem = menu.items[i]
             if thisItem!.state == .on {
                 break
             }
+            i += 1
         } while (!(thisItem!.isSeparatorItem))
 
         // should never be nil
