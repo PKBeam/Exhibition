@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     // whether the user should see only modes that are safe to use
     var onlySafeModes = true
+    var onlyHidpiModes = true
 
     // gets the display ID of the display that is currently in focus.
     func getCurrentDisplay() -> CGDirectDisplayID {
@@ -61,7 +62,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			// add information about the scaling of the mode (is it HiDPI?)
 			if thisMode.width != thisMode.pixelWidth {
 				outputString += " @ \(thisMode.pixelWidth/thisMode.width)x"
-			}
+			} else if onlyHidpiModes {
+                continue
+            }
 
             // add refresh rate, if supported
             if thisMode.refreshRate != 0 {
@@ -112,7 +115,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
         rebuildMenu()
 	}
-	
+
+    @objc func toggleShownHidpiModes(sender: NSMenuItem) {
+		// toggle state
+		if sender.state == .on {
+			sender.state = .off
+            onlyHidpiModes = false
+		} else {
+			sender.state = .on
+            onlyHidpiModes = true
+		}
+        rebuildMenu()
+	}
+
 	@objc func changeDisplayMode(sender: NSMenuItem) {
 		let mode = sender.representedObject as! CGDisplayMode
 		let configToken = UnsafeMutablePointer<CGDisplayConfigRef?>.allocate(capacity: 1)
@@ -182,6 +197,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         showModesItem.state = (onlySafeModes ? .on : .off)
         menu.addItem(showModesItem)
         //--------------
+        let showHidpiItem = NSMenuItem(title: "Show only HiDPI modes", action: #selector(toggleShownHidpiModes), keyEquivalent: "")
+        showHidpiItem.state = (onlyHidpiModes ? .on : .off)
+        menu.addItem(showHidpiItem)
+        //--------------
         menu.addItem(NSMenuItem.separator())
         //--------------
         menu.addItem(withTitle: "Quit Exhibition", action: #selector(NSApplication.shared.terminate(_:)), keyEquivalent: "")
@@ -195,6 +214,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		statusItem.image = icon
 		statusItem.highlightMode = true
 		statusItem.menu = menu
+        buildMenu()
 		
 		// Make observer for if user changes display in System Preferences
 		NotificationCenter.default.addObserver(forName: NSApplication.didChangeScreenParametersNotification, object: nil, queue: nil, using: { _ in
